@@ -1,0 +1,23 @@
+{
+  "name": "salesforce-id-copy",
+  "version": "1.0.0",
+  "description": "Quickly copy case-sensitive Salesforce record Ids from case-insensitive 18 character Ids",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anthony-bath/salesforce-id-copy.git"
+  },
+  "author": "Anthony Bath",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anthony-bath/salesforce-id-copy/issues"
+  },
+  "homepage": "https://github.com/anthony-bath/salesforce-id-copy#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.0.279",
+    "typescript": "^5.6.3"
+  }
+}
