@@ -5,14 +5,13 @@ export function to18CaseSafeFrom18(id: string): string {
   const baseId = id.substring(0, 15);
   let converted = '';
 
-  for (let i = 0; i < encoding.length; i++) {
-    const char = encoding.charAt(i);
-    const index = CHARSET.indexOf(char);
+  for (let blockNumber = 0; blockNumber < encoding.length; blockNumber++) {
+    const blockValue = CHARSET.indexOf(encoding.charAt(blockNumber));
 
-    for (let j = 0; j < 5; j++) {
-      const char = baseId.charAt(i * 5 + j);
+    for (let position = 0; position < 5; position++) {
+      const char = baseId.charAt(blockNumber * 5 + position);
 
-      if (index & (1 << j)) {
+      if (blockValue & (1 << position)) {
         converted += char.toUpperCase();
       } else {
         converted += char;
